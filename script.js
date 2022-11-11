@@ -19,11 +19,17 @@ var game = '';
 //User choice 
 alert('We are playing Rock, Paper, Scissors!\nYou will ear 1 point everytime you win.\nFirst we are going to ask for your choice.\nSelect Cancel button if you want to finish.');
 
-var userChoice = prompt("Please, enter your choice: r for Rock, p for Paper  or s for Scissor (lowercase!)");
+var userChoice = prompt("Please, enter your choice: r for Rock, p for Paper  or s for Scissor.");
+
 
 //Repits until cancel is press
 
+
 while (userChoice) {
+
+
+ //Tranform to lowercase
+ userChoice = userChoice.toLowerCase();
 
   //Computer choice
 
@@ -68,15 +74,14 @@ while (userChoice) {
 
   }
 
-
   // Returns game results
 
   alert('Your choice: ' + userChoice + '\nComputer Choice: ' + ComputerChoice + '\nThe Winner is: ' + winner);
 
   //Repeats choice for user untill cancel is press
 
-  var userChoice = prompt("Please, enter another choice: r, p or s (lowercase!)");
-
+  var userChoice = prompt("Please, enter another choice: r, p or s");
+ 
 };
 
 
@@ -92,7 +97,7 @@ if (userPoints > computerPoints) {
 
 } else if (userPoints < computerPoints) {
 
-  alert('Computers are better tha people! Computer won!\n Refresh and try again!');
+  alert('Computers are better than people! Computer won!\n Refresh and try again!');
 
 } else {
 
